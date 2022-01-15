@@ -1,0 +1,13 @@
+import os
+import argparse
+
+parse = argparse.ArgumentParser("")
+parse.add_argument('-t','--target', help="IP")
+parse.add_argument('-oP', '--one_port', help="ONE_PORT")
+parse.add_argument('-tP', '--twoport', help="TWO_PORT")
+parse.add_argument('-ttP', '--thirt', help="three_port")
+parse = parse.parse_args()
+
+os.system(f"python3 one_port -t {parse.target} -oP {parse.one_port}")
+os.system(f"python3 one_port -t {parse.target} -oP {parse.twoport}")
+os.system(f"python3 one_port -t {parse.target} -oP {parse.thirt}")

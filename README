@@ -1,0 +1,13 @@
+A tool with the same functions as shadow scanner, only easier to use, it 
+has several options, possibly adding some others later.
+--------------------------------------------------------------------------  
+Uma ferramenta com as mesmas funções do scanner de sombras, 
+só que mais fácil de usar, possui várias opções, 
+possivelmente adicionando outras
+ posteriormente.
+-----------------------------------------------------------------------
+Una herramienta con las mismas funciones que escaner shadow, solo que mas senci>
+posiblemente agrague algunas otras posteriormente.
+Commands
+sudo bash install.sh
+sudo python3 tcp.py

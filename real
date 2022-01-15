@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+import socket
+import argparse
+from socket import gethostbyaddr
+from colorama import Fore
+parse = argparse.ArgumentParser()
+parse.add_argument('-t', '--target', help="target")
+parse = parse.parse_args()
+global ip 
+global port
+
+ip = str(parse.target)
+
+def funtion():
+	try:
+		sock.connect( (ip, port) )
+		return True
+	except:
+		return None
+
+for port in range(0, 10000):
+	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	valor = funtion()
+	if valor == None:
+		pass
+	elif valor == True:
+		print(Fore.YELLOW+"=== "+"open", port, Fore.RED+"*")
+	else:
+		pass

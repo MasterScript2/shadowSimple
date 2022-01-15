@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+import time
+import socket
+import argparse
+import colorama
+from colorama import Fore
+
+global ip
+global port_a
+global port_b
+
+parse = argparse.ArgumentParser("")
+parse.add_argument('-t','--target', help="IP")
+parse.add_argument('-oP', '--one_port', help="ONE_PORT")
+parse.add_argument('-tP', '--twoport', help="THO_PORT")
+parse = parse.parse_args()
+
+os.system(f"python3 one_port -t {parse.target} -oP {parse.one_port}")
+os.system(f"python3 one_port -t {parse.target} -oP {parse.twoport}")

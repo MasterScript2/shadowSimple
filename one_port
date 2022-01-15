@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+import time
+import socket
+import colorama
+import argparse
+from colorama import Fore
+
+parse = argparse.ArgumentParser("")
+parse.add_argument('-t','--target', help="IP")
+parse.add_argument('-oP', '--port', help="ONE_PORT")
+parse = parse.parse_args()
+
+global ip
+global port
+
+ip = parse.target
+port = parse.port
+port = int(port)
+class Col:
+	red = Fore.RED
+	blue = Fore.BLUE
+	green = Fore.GREEN
+	white = Fore.WHITE
+	yellow = Fore.YELLOW
+
+class Decore:
+	decore = Col.yellow+"["+Col.red+"*"+Col.yellow+"]"
+
+def funtion_one_port():
+    try:
+        sock.connect( (ip, port) )
+        return True
+    except:
+        return None
+print(Decore.decore+" Comprobando puerto... ")
+time.sleep(1)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+value = funtion_one_port()
+if value == None:
+    print(Col.yellow+"=== port close", port)
+elif value == True:
+    print(Col.yellow+"=== port open", port)
+else:
+    pass
